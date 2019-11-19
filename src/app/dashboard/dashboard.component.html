@@ -5,7 +5,7 @@
       <h5 class="text-center mb-5">
           {{r?.nome | uppercase}}
       </h5>
-      <button type="button" class="btn btn-danger mb-5" (click)="disabled = !disabled">Adicionar</button>
+      <app-modal-adicionar [redeSocial]="r"></app-modal-adicionar>
     </div>
   </div>
 </div>
