@@ -1,0 +1,11 @@
+<div class="mt-5 mr-5 ml-5">
+  <div class="row row-backgroud">
+    <div class="col-lg-2 mb-2 text-center" *ngFor="let r of redesSociais">
+      <img src="{{r?.img}}" class="rounded mx-auto d-block mb-2 mt-5" style="width: 30%">
+      <h5 class="text-center mb-2">
+          {{r?.nome | uppercase}}
+      </h5>
+      <button type="button" class="btn btn-danger" (click)="disabled = !disabled">Adicionar</button>
+    </div>
+  </div>
+</div>
