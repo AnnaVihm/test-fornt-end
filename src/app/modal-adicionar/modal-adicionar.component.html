@@ -1,0 +1,66 @@
+<button type="button" class="btn btn-danger mb-5" (click)="openModal(template)">Adicionar</button>
+<ng-template #template>
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">Vincular página {{rede.nome}}</h4>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div mat-dialog-content class="p-20 pb-0">
+      <mat-horizontal-stepper [linear]="isLinear" #stepper>
+        <mat-step [stepControl]="form">
+          <form [formGroup]="form">
+            <ng-template matStepLabel>Verficação</ng-template>
+            <div class="input-group flex-nowrap mb-5">
+
+              <input type="text" class="form-control" placeholder="Usuário" aria-label="usuario"
+                formControlName="usuario" aria-describedby="addon-wrapping">
+            </div>
+            <div class="input-group flex-nowrap">
+
+              <input type="text" class="form-control" placeholder="Senha" aria-label="senha" formControlName="senha"
+                aria-describedby="addon-wrapping">
+            </div>
+            <div>
+              <button class="btn btn-primary" mat-button matStepperNext [disabled]="form.invalid">Proximo</button>
+            </div>
+          </form>
+        </mat-step>
+        <mat-step [stepControl]="form">
+          <form [formGroup]="form">
+            <ng-template matStepLabel>Páginas</ng-template>
+
+            <div style="background-color: #eaeaea">
+              <mat-radio-group class="example-radio-group" formControlName="pagina">
+                <mat-radio-button class="example-radio-button" *ngFor="let p of paginas" [value]="p">
+                  <div class="row">
+                    <div class="col-lg-3">
+                      <img src="{{p?.picture}}" style="width: 60px;">
+                    </div>
+                    <div class="col-lg-8">
+                      <p>{{p?.name}}</p>
+                      <small>{{p?.url}}</small>
+                    </div>
+                  </div>
+                </mat-radio-button>
+              </mat-radio-group>
+            </div>
+            <p class="text-center mt-5">Não encontrou sua página?</p>
+            <p class="text-center"> <a href="javaScript.void(0)">Clicke para atualizar sua permissões do facebook</a>
+            </p>
+            <div class="row">
+              <div class="col-lg-6">
+                <button class="btn" mat-button matStepperPrevious>Voltar</button>
+              </div>
+              <div class="col-lg-6">
+                <button class="btn btn-primary" mat-button matStepperNext style="float: right;" (click)="onSubmit(form.value)">Proximo</button>
+              </div>
+
+            </div>
+          </form>
+        </mat-step>
+      </mat-horizontal-stepper>
+    </div>
+  </div>
+</ng-template>

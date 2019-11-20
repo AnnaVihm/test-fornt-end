@@ -14,14 +14,13 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
-## Running unit tests
+## Tecnologia escolhida
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+O Angular foi minha tecnologia escolhida pois já trabalho com o framework a 2 anos e meio, sendo uma tecnologia em que me agrada muito em relação a
+Organização, modularização e a facilidade de utilizar componentes compartilhados. Também por atualizar partes de codigos sendo single-page application, Otima para se trabalhar.
 
-## Running end-to-end tests
+## JSON-SERVER
+REST FALSO
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Install JSON Server `npm install -g json-server`
+Start JSON Server `json-server --watch db.json`

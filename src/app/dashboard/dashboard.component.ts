@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { DemoService } from '../services/demo.service';
+import { ModalAdicionarComponent } from '../modal-adicionar/modal-adicionar.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-dashboard',
@@ -8,21 +11,41 @@ import { Component, OnInit } from '@angular/core';
 export class DashboardComponent implements OnInit {
 
   redesSociais: any;
-
-  constructor() { }
+  paginas: any;
+  paginasAdd: any;
+  constructor(private demoService: DemoService,
+    private dialog: MatDialog) { }
 
   ngOnInit() {
-    this.redesSociais = [
-      { id: 1, nome: "Facebook", img: '../assets/imgs/icons/facebook.png' },
-      { id: 2, nome: "Twitter", img: '../assets/imgs/icons/twitter-logo.png' },
-      { id: 3, nome: "Instagram", img: '../assets/imgs/icons/instagram.png' },
-      { id: 4, nome: "Google Meu Negócio", img: '../assets/imgs/icons/google-meu-negocio.png' },
-      { id: 5, nome: "Pinterest", img: '../assets/imgs/icons/pinterest.png' },
-      { id: 6, nome: "Linkedin", img: '../assets/imgs/icons/linkedin.png' },
-      { id: 7, nome: "Youtube", img: '../assets/imgs/icons/youtube.png' },
-      { id: 8, nome: "WhatsApp", img: "../assets/imgs/icons/whastapp.png" },
-      { id: 9, nome: "Google Analytics", img: "../assets/imgs/icons/analytics.png" }
-    ]
+
+    this.demoService.findAllPaginas().subscribe(data => {
+      this.paginas = data;
+    })
+
+    this.demoService.findAllRedesSociais().subscribe(data => {
+      this.redesSociais = data;
+    })
   }
 
+  openModal(value): void {
+    let dialogRef = this.dialog.open(ModalAdicionarComponent, {
+      data: {
+        redeSocial: value.nome,
+        paginas: this.paginas.filter(e => e.channel_key == value.key)[0]
+      },
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
+  }
+  adicionarPagina(value: any) {
+    let obj = {
+      id:value.rede,
+      img: value.pagina.picture,
+      nome: value.pagina.name
+    }
+    this.demoService.update(obj).subscribe(data =>{
+      console.log('deu certo')
+    });
+  }
 }

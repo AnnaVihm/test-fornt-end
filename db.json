@@ -1,0 +1,12 @@
+{"redesSociais":[
+    { "id": 1, "nome": "Facebook", "img": "../assets/imgs/icons/facebook.png", "key":"facebook" },
+    { "id": 2, "nome": "Twitter", "img": "../assets/imgs/icons/twitter-logo.png", "key":"twitter" },
+    { "id": 3, "nome": "Instagram", "img": "../assets/imgs/icons/instagram.png", "key":"instagram" },
+    { "id": 4, "nome": "Google Meu Negócio", "img": "../assets/imgs/icons/google-meu-negocio.png", "key":"google_menu_negocio" },
+    { "id": 5, "nome": "Pinterest", "img": "../assets/imgs/icons/pinterest.png", "key":"pinterest" },
+    { "id": 6, "nome": "Linkedin", "img": "../assets/imgs/icons/linkedin.png", "key":"linkedin" },
+    { "id": 7, "nome": "Youtube", "img": "../assets/imgs/icons/youtube.png", "key":"youtube" },
+    { "id": 8, "nome": "WhatsApp", "img": "../assets/imgs/icons/whastapp.png", "key":"whatsapp" },
+    { "id": 9, "nome": "Google Analytics", "img": "../assets/imgs/icons/analytics.png", "key":"google_analytics" }
+  ]
+}
