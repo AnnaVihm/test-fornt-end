@@ -5,33 +5,30 @@
       "nome": "Facebook",
       "img": "../assets/imgs/icons/facebook.png",
       "key": "facebook",
-      "paginaAdd": true,
-      "urlPagina": "https://www.facebook.com/buffet-alegria-geral",
-      "imgPagina": "https://picsum.photos/id/1042/3456/5184",
-      "nomPagina": null,
-      "nomePagina": "Buffet Alegria Geral"
+      "paginaAdd": false,
+      "urlPagina": null,
+      "imgPagina": null,
+      "nomPagina": null
     },
     {
       "id": 2,
       "nome": "Twitter",
       "img": "../assets/imgs/icons/twitter-logo.png",
       "key": "twitter",
-      "paginaAdd": true,
-      "urlPagina": "https://www.instagram.com/bicicletariadoalemao/",
-      "imgPagina": "https://picsum.photos/id/1077/100/100",
-      "nomPagina": null,
-      "nomePagina": "Bicicletaria do Alemão"
+      "paginaAdd": false,
+      "urlPagina": null,
+      "imgPagina": null,
+      "nomPagina": null
     },
     {
       "id": 3,
       "nome": "Instagram",
       "img": "../assets/imgs/icons/instagram.png",
       "key": "instagram",
-      "paginaAdd": true,
-      "urlPagina": "http://pinterest.com/techmais",
-      "imgPagina": "https://picsum.photos/id/160/1000/1000",
-      "nomPagina": null,
-      "nomePagina": "Tech+"
+      "paginaAdd": false,
+      "urlPagina": null,
+      "imgPagina": null,
+      "nomPagina": null
     },
     {
       "id": 4,
