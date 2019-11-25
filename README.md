@@ -26,7 +26,7 @@ Install JSON Server `npm install -g json-server`
 Start JSON Server `json-server --watch db.json`
 
 ## PASSOS PARA EXECULTAR O PROJETO:
-Para execulção do projeto deve ser instalado nodeJs, angular Cli e JSON Server, Todos os passos são obrigatorios
+Para execulção do projeto deve ser instalado nodeJs, angular Cli e JSON Server, Todos os passos são obrigatorios.
 
 1° Node : https://nodejs.org/en/ ou `sudo apt-get install nodejs`
 
@@ -38,6 +38,7 @@ Para execulção do projeto deve ser instalado nodeJs, angular Cli e JSON Server
 
 5° Em outro terminal ou cmd deve ser execultado dentro do projeto `ng serve` onde sera compliado o projeto angular.
 
+6° Ao acessar `http://localhost:4200/` sera exibido o projeto.
 
 
 
