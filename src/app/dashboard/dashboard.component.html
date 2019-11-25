@@ -1,12 +1,20 @@
 <div class="mt-5 mr-5 ml-5">
   <div class="row">
     <div class="col-lg-2 text-center border-col" *ngFor="let r of redesSociais">
-      <div *ngIf="paginaAdd == null || paginaAdd != null && paginaAdd.rede != r.id">
+      <div *ngIf="r?.paginaAdd == false">
         <img src="{{r?.img}}" class="rounded mx-auto d-block mb-2 mt-5" style="width: 30%">
         <h5 class="text-center mb-5">
           {{r?.nome | uppercase}}
         </h5>
         <app-modal-adicionar [rede]="r" [paginas]="paginas" (formEvent)="adicionarPagina($event)"></app-modal-adicionar>
+      </div>
+      <div *ngIf="r?.paginaAdd == true">
+        <h5 class="text-center mt-5">
+          <a href="{{r?.urlPagina}}">{{r?.nomePagina | uppercase}}</a>
+         
+        </h5>
+        <img src="{{r?.imgPagina}}" class="rounded mx-auto d-block mb-2 mt-2" style="width: 50%">
+        <small>Página {{r?.nome}}</small>
       </div>
     </div>
   </div>

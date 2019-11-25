@@ -27,6 +27,12 @@ export class DashboardComponent implements OnInit {
     })
   }
 
+  atualizar() {
+    this.demoService.findAllRedesSociais().subscribe(data => {
+      this.redesSociais = data;
+    })
+  }
+
   openModal(value): void {
     let dialogRef = this.dialog.open(ModalAdicionarComponent, {
       data: {
@@ -39,13 +45,17 @@ export class DashboardComponent implements OnInit {
     });
   }
   adicionarPagina(value: any) {
-    let obj = {
-      id:value.rede,
-      img: value.pagina.picture,
-      nome: value.pagina.name
-    }
-    this.demoService.update(obj).subscribe(data =>{
-      console.log('deu certo')
+    let rede = value.rede;
+    rede.paginaAdd = true;
+    rede.paginaAdd = true;
+    rede.urlPagina = value.pagina.url;
+    rede.imgPagina = value.pagina.picture;
+    rede.nomePagina = value.pagina.name;
+    
+    this.demoService.update(rede).subscribe(data => {
+      if (data) {
+        this.atualizar()
+      }
     });
   }
 }

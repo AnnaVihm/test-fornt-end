@@ -24,7 +24,7 @@ export class ModalAdicionarComponent implements OnInit {
       usuario: ['', Validators.required],
       senha: ['', Validators.required],
       pagina:[''],
-      rede:[this.rede.id]
+      rede:[this.rede]
     });
     this.secondFormGroup = this._formBuilder.group({
       secondCtrl: ['', Validators.required]

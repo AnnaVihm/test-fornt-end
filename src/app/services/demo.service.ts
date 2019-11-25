@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from "@angular/common/http";
+import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Observable } from 'rxjs/Observable';
 
 @Injectable()
@@ -17,8 +17,16 @@ export class DemoService {
 
   update(value):Observable<any>{
     let body = JSON.stringify(value)
-    return this.http.put("http://localhost:3000/redesSociais", body)
+    return this.http.put(`http://localhost:3000/redesSociais/${value.id}`, body, this.httpOptions())
 
+  }
+
+  httpOptions(): any {
+    return {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+      })
+    };
   }
 
 }

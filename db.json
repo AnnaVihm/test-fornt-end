@@ -1,12 +1,97 @@
-{"redesSociais":[
-    { "id": 1, "nome": "Facebook", "img": "../assets/imgs/icons/facebook.png", "key":"facebook" },
-    { "id": 2, "nome": "Twitter", "img": "../assets/imgs/icons/twitter-logo.png", "key":"twitter" },
-    { "id": 3, "nome": "Instagram", "img": "../assets/imgs/icons/instagram.png", "key":"instagram" },
-    { "id": 4, "nome": "Google Meu Negócio", "img": "../assets/imgs/icons/google-meu-negocio.png", "key":"google_menu_negocio" },
-    { "id": 5, "nome": "Pinterest", "img": "../assets/imgs/icons/pinterest.png", "key":"pinterest" },
-    { "id": 6, "nome": "Linkedin", "img": "../assets/imgs/icons/linkedin.png", "key":"linkedin" },
-    { "id": 7, "nome": "Youtube", "img": "../assets/imgs/icons/youtube.png", "key":"youtube" },
-    { "id": 8, "nome": "WhatsApp", "img": "../assets/imgs/icons/whastapp.png", "key":"whatsapp" },
-    { "id": 9, "nome": "Google Analytics", "img": "../assets/imgs/icons/analytics.png", "key":"google_analytics" }
+{
+  "redesSociais": [
+    {
+      "id": 1,
+      "nome": "Facebook",
+      "img": "../assets/imgs/icons/facebook.png",
+      "key": "facebook",
+      "paginaAdd": true,
+      "urlPagina": "https://www.facebook.com/buffet-alegria-geral",
+      "imgPagina": "https://picsum.photos/id/1042/3456/5184",
+      "nomPagina": null,
+      "nomePagina": "Buffet Alegria Geral"
+    },
+    {
+      "id": 2,
+      "nome": "Twitter",
+      "img": "../assets/imgs/icons/twitter-logo.png",
+      "key": "twitter",
+      "paginaAdd": true,
+      "urlPagina": "https://www.instagram.com/bicicletariadoalemao/",
+      "imgPagina": "https://picsum.photos/id/1077/100/100",
+      "nomPagina": null,
+      "nomePagina": "Bicicletaria do Alemão"
+    },
+    {
+      "id": 3,
+      "nome": "Instagram",
+      "img": "../assets/imgs/icons/instagram.png",
+      "key": "instagram",
+      "paginaAdd": true,
+      "urlPagina": "http://pinterest.com/techmais",
+      "imgPagina": "https://picsum.photos/id/160/1000/1000",
+      "nomPagina": null,
+      "nomePagina": "Tech+"
+    },
+    {
+      "id": 4,
+      "nome": "Google Meu Negócio",
+      "img": "../assets/imgs/icons/google-meu-negocio.png",
+      "key": "google_menu_negocio",
+      "paginaAdd": false,
+      "urlPagina": null,
+      "imgPagina": null,
+      "nomPagina": null
+    },
+    {
+      "id": 5,
+      "nome": "Pinterest",
+      "img": "../assets/imgs/icons/pinterest.png",
+      "key": "pinterest",
+      "paginaAdd": false,
+      "urlPagina": null,
+      "imgPagina": null,
+      "nomPagina": null
+    },
+    {
+      "id": 6,
+      "nome": "Linkedin",
+      "img": "../assets/imgs/icons/linkedin.png",
+      "key": "linkedin",
+      "paginaAdd": false,
+      "urlPagina": null,
+      "imgPagina": null,
+      "nomPagina": null
+    },
+    {
+      "id": 7,
+      "nome": "Youtube",
+      "img": "../assets/imgs/icons/youtube.png",
+      "key": "youtube",
+      "paginaAdd": false,
+      "urlPagina": null,
+      "imgPagina": null,
+      "nomPagina": null
+    },
+    {
+      "id": 8,
+      "nome": "WhatsApp",
+      "img": "../assets/imgs/icons/whastapp.png",
+      "key": "whatsapp",
+      "paginaAdd": false,
+      "urlPagina": null,
+      "imgPagina": null,
+      "nomPagina": null
+    },
+    {
+      "id": 9,
+      "nome": "Google Analytics",
+      "img": "../assets/imgs/icons/analytics.png",
+      "key": "google_analytics",
+      "paginaAdd": false,
+      "urlPagina": null,
+      "imgPagina": null,
+      "nomPagina": null
+    }
   ]
 }
